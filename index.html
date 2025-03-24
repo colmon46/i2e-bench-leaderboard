@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400&display=swap" rel="stylesheet" />
+
+<head>
+  <meta charset="UTF-8" />
+  <title>I2E-Bench Leaderboard</title>
+
+  <link rel="icon" href="https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/1f3c6.svg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="content" class="container-fluid d-flex flex-column align-items-center gap-3">
+    <div></div>
+
+    <div class="d-flex align-items-center mt-5">
+      <h1 class="text-nowrap">I2E-Bench Leaderboard</h1>
+    </div>
+
+    <div class="d-flex flex-row justify-content-center gap-3">
+      <a href=""><img
+          src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"
+          alt="github" class="img-fluid" /></a>
+      <a href=""><img
+          src="https://img.shields.io/badge/arXiv-paper-b31b1b.svg?style=for-the-badge" alt="paper"
+          class="img-fluid" /></a>
+      <a href=""> <img src="https://img.shields.io/badge/Dataset-blue.svg?style=for-the-badge" alt="dataset"
+          class="img-fluid" /></a>
+    </div>
+    
+    <!-- <h3 class="fw-light text-nowrap">
+      <small id="warning">TODO<br /></small>
+    </h3> -->
+    
+    <div class="d-flex justify-content-center mt-3">
+      <div class="btn-group" role="group" aria-label="View selection">
+        <input
+          type="radio"
+          class="btn-check"
+          name="view"
+          id="btn_single"
+          autocomplete="off"
+        />
+        <label class="btn btn-outline-primary" for="btn_single">
+          I2E-Bench
+        </label>
+    
+        <input
+          type="radio"
+          class="btn-check"
+          name="view"
+          id="btn_combined"
+          autocomplete="off"
+          checked
+        />
+        <label class="btn btn-outline-success" for="btn_combined">
+          Combined
+        </label>
+      </div>
+    </div>
+    
+    <div class="container-fluid d-flex flex-row flex-nowrap">
+      <div class="container-fluid d-flex flex-column align-items-center">
+        <table id="plused"
+          class="table table-responsive table-striped table-bordered flex-shrink-1 border border-success border-3">
+        </table>
+      </div>
+    </div>
+
+
+
+    <!-- <div id="notes">
+      <h3>📝 Notes</h3>
+      <div class="inline-block mt-3">
+        <ul>
+          <li>
+            💡 Hover over the software in the table header to see the full software names.
+          <li>
+            Results are collected using greedy decoding. Setup
+            details can be found
+            <a href="https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding">here</a>.
+          </li>
+          <li>
+            Micro-average numbers are reported.
+          </li>
+          <li>
+            Please <a href="mailto:likaixin@u.nus.edu">contact us</a> for result submission.
+          </li>
+        </ul>
+      </div>
+    </div> -->
+
+    
+    <!-- Citation -->
+    <!-- <div class="container-fluid d-flex flex-column align-items-center gap-4 mt-5">
+      <h3>Citation</h3> -->
+      <!-- <p class="text-muted">
+        If you find this work useful, please consider citing:
+      </p> -->
+      <!-- <div class="bg-light border rounded p-3 w-75">
+        <code>
+          TODO
+        </code>
+      </div>
+    </div> -->
+
+    <!-- Acknowledgement -->  
+    <div id="acknowledgement">
+      <h3>Acknowledgement</h3>
+      <div class="inline-block mt-3">
+        <ul>
+            This leaderboard is built using the template from ScreenSpot-Pro. We would like to acknowledge their work. <br>
+            You can find the original template <a href="https://github.com/GUI-Agent/grounding-leaderboard">here</a>.
+        </ul>
+      </div>
+    </div>
+
+
+
+    
+
+  </div>
+
+
+
+<div></div>
+<!--Vertical placeholder-->
+&nbsp;&nbsp;
+
+
+
+
+  <script src="leaderboard.js"></script>
+  <script>
+    // Update the arrow when collapse state changes
+    const collapseElement = document.getElementById('software-list');
+    const collapseIcon = document.getElementById('collapse-icon');
+  
+    collapseElement.addEventListener('shown.bs.collapse', function () {
+      collapseIcon.textContent = '▼'; // when expanded
+    });
+  
+    collapseElement.addEventListener('hidden.bs.collapse', function () {
+      collapseIcon.textContent = '▶'; //  when collapsed
+    });
+  </script>
+</body>
+
+</html>
