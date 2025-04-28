@@ -38,7 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 { model: "Qwen2.5-VL-3B", avg: 41.3, values: ["-", "-", "-", 55.5, 51.4, 35.8, 41.7, 23.9, 41.3]},
                 { model: "Qwen2.5-VL-7B", avg: 55.8, values: ["-", "-", "-", 84.7, 58.4, 51.0, 53.8, 29.0, 55.8]},
                 { model: "Qwen2.5-VL-72B", avg: 60.7, values: ["-", "-", "-", 87.1, 49.6, 52.5, 51.4, 43.6, 60.7]},
-                { model: "OmniParser-V2", avg: 55.5, values: [75.7, 66.3, 74.1, 72.0, 57.0, 53.5, 54.8, 39.6, 55.5]}
+                { model: "OmniParser-V2", avg: 55.5, values: [75.7, 66.3, 74.1, 72.0, 57.0, 53.5, 54.8, 39.6, 55.5]},
+                { model: "InfiGUI-R1", avg: 62.3, values: [89.9, 85.0, 87.1, 87.5, 78.7, 64.2, 69.7, 29.6, 62.3]},
+                { model: "UI-R1", avg: 51.6, values: ["-", 79.6, 77.2, 78.6, 67.9, 52.8, 58.5, 17.8, 51.6]}
             ];
 
             combinedTableData.sort((a, b) => b.avg - a.avg);
@@ -99,7 +101,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 { model: "Qwen2.5-VL-3B", avg: 41.7, values: [39.9, 38.7, 44.5, 48.3, 46.9, 69.7, 29.0, 32.0, 51.4, 35.8, 41.7]},
                 { model: "Qwen2.5-VL-7B", avg: 53.8, values: [56.9, 41.6, 61.7, 59.5, 59.4, 74.7, 42.8, 46.2, 58.4, 51.0, 53.8]},
                 { model: "Qwen2.5-VL-72B", avg: 51.4, values: [49.0, 47.2, 55.3, 63.9, 64.0, 62.4, 35.5, 42.7, 49.6, 52.5, 51.4]},
-                { model: "OmniParser-V2", avg: 54.8, values: [40.7, 42.4, 69.4, 72.2, 61.6, 64.4, 60.9, 29.4, 57.0, 53.5, 54.8]}
+                { model: "OmniParser-V2", avg: 54.8, values: [40.7, 42.4, 69.4, 72.2, 61.6, 64.4, 60.9, 29.4, 57.0, 53.5, 54.8]},
+                { model: "InfiGUI-R1", avg: 69.7, values:[71.7, 57.2, 78.2, 71.6, 67.5, 82.6, 74.2, 60.4, 78.7, 64.2, 69.7]},
+                { model: "UI-R1", avg:58.5, values: [58.1, 46.2, 67.8, 61.7, 54.9, 70.8, 59.1, 53.1, 67.9, 52.8, 58.5]}
             ];
 
             singleTableData.sort((a, b) => b.avg - a.avg);
