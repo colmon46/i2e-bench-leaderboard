@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 { model: "ShowUI-2B", avg: 42.0, values: [84.6, 73.2, 69.9, 76.8, 51.3, 35.6, 41.5, 7.7, 42.0] },
                 { model: "OS-Atlas-4B", avg: 39.4, values: [73.3, 73.4, 61.1, 70.1, 51.5, 39.9, 44.3, 3.7, 39.4] },
                 { model: "OS-Atlas-7B", avg: 53.3, values: [83.8, 83.1, 79.7, 82.5, 63.2, 55.8, 58.6, 18.9, 53.3] },
-                { model: "I2E-VLM-4B", avg: 45.3, values: [70.3, 70.9, 70.1, 70.4, 61.9, 48.3, 53.4, 12.2, 45.3] },
-                { model: "I2E-VLM-7B", avg: 58.5, values: [86.5, 78.0, 82.6, 82.5, 72.0, 67.9, 69.5, 23.6, 58.5] },
+                { model: "UI-I2E-VLM-4B", avg: 45.3, values: [70.3, 70.9, 70.1, 70.4, 61.9, 48.3, 53.4, 12.2, 45.3] },
+                { model: "UI-I2E-VLM-7B", avg: 58.5, values: [86.5, 78.0, 82.6, 82.5, 72.0, 67.9, 69.5, 23.6, 58.5] },
                 { model: "Uground-V1-2B", avg: 54.3, values: [81.5, 75.4, 79.1, 78.8, 72.9, 47.9, 57.4, 26.6, 54.3]},
                 { model: "Uground-V1-7B", avg: 62.8, values: [87.0, 87.6, 86.5, 87.1, 81.3, 63.6, 70.3, 31.1, 62.8]},
                 { model: "Uground-V1-72B", avg: 66.8, values: [89.2, 89.2, 91.0, 89.7, 84.5, 71.3, 76.3, 34.3, 66.8]},
@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 { model: "Qwen2.5-VL-72B", avg: 60.7, values: ["-", "-", "-", 87.1, 49.6, 52.5, 51.4, 43.6, 60.7]},
                 { model: "OmniParser-V2", avg: 55.5, values: [75.7, 66.3, 74.1, 72.0, 57.0, 53.5, 54.8, 39.6, 55.5]},
                 { model: "InfiGUI-R1", avg: 62.3, values: [89.9, 85.0, 87.1, 87.5, 78.7, 64.2, 69.7, 29.6, 62.3]},
-                { model: "UI-R1", avg: 51.6, values: ["-", 79.6, 77.2, 78.6, 67.9, 52.8, 58.5, 17.8, 51.6]}
+                { model: "UI-R1", avg: 51.6, values: ["-", 79.6, 77.2, 78.6, 67.9, 52.8, 58.5, 17.8, 51.6]},
+                { model: "UI-TARS-1.5-7B", avg: 67.8, values: [88.5, 87.6, 88.3, 88.1, 81.3, 68.2, 73.2, 42.2, 67.8]}
             ];
 
             combinedTableData.sort((a, b) => b.avg - a.avg);
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <tr>
                             <th rowspan="2">Model</th>
                             <th colspan="4">ScreenSpot</th>
-                            <th colspan="3">I2E-Bench</th>
+                            <th colspan="3">UI-I2E-Bench</th>
                             <th rowspan="2">ScreenSpot-Pro</th>
                             <th rowspan="2">Avg.*</th>
                         </tr>
@@ -89,8 +90,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 { model: "ShowUI-2B", avg: 41.5, values: [29.6, 30.4, 53.9, 52.0, 44.1, 51.1, 52.8, 18.9, 51.3, 35.6, 41.5] },
                 { model: "OS-Atlas-4B", avg: 44.3, values: [54.6, 19.9, 58.6, 43.5, 44.1, 46.6, 46.3, 42.2, 51.5, 39.9, 44.3] },
                 { model: "OS-Atlas-7B", avg: 58.6, values: [52.2, 48.9, 68.1, 69.1, 58.7, 80.3, 70.1, 32.3, 63.2, 55.8, 58.6] },
-                { model: "I2E-VLM-4B", avg: 53.4, values: [60.9, 38.9, 61.4, 54.3, 50.0, 61.2, 68.6, 39.0, 61.9, 48.3, 53.4] },
-                { model: "I2E-VLM-7B", avg: 69.5, values: [62.1, 64.0, 76.2, 77.0, 68.2, 84.8, 86.2, 44.4, 72.0, 67.9, 69.5] },
+                { model: "UI-I2E-VLM-4B", avg: 53.4, values: [60.9, 38.9, 61.4, 54.3, 50.0, 61.2, 68.6, 39.0, 61.9, 48.3, 53.4] },
+                { model: "UI-I2E-VLM-7B", avg: 69.5, values: [62.1, 64.0, 76.2, 77.0, 68.2, 84.8, 86.2, 44.4, 72.0, 67.9, 69.5] },
                 { model: "Uground-V1-2B", avg: 57.4, values: [66.4, 49.5, 59.9, 57.6, 50.7, 82.0, 64.8, 44.7, 72.9, 47.9, 57.4]},
                 { model: "Uground-V1-7B", avg: 70.3, values: [70.8, 65.7, 73.5, 72.9, 62.9, 83.7, 75.4, 63.5, 81.3, 63.6, 70.3]},
                 { model: "Uground-V1-72B", avg: 76.3, values: [74.7, 74.6, 78.2, 79.6, 75.5, 93.3, 74.5, 68.7, 84.5, 71.3, 76.3]},
@@ -103,7 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 { model: "Qwen2.5-VL-72B", avg: 51.4, values: [49.0, 47.2, 55.3, 63.9, 64.0, 62.4, 35.5, 42.7, 49.6, 52.5, 51.4]},
                 { model: "OmniParser-V2", avg: 54.8, values: [40.7, 42.4, 69.4, 72.2, 61.6, 64.4, 60.9, 29.4, 57.0, 53.5, 54.8]},
                 { model: "InfiGUI-R1", avg: 69.7, values:[71.7, 57.2, 78.2, 71.6, 67.5, 82.6, 74.2, 60.4, 78.7, 64.2, 69.7]},
-                { model: "UI-R1", avg:58.5, values: [58.1, 46.2, 67.8, 61.7, 54.9, 70.8, 59.1, 53.1, 67.9, 52.8, 58.5]}
+                { model: "UI-R1", avg:58.5, values: [58.1, 46.2, 67.8, 61.7, 54.9, 70.8, 59.1, 53.1, 67.9, 52.8, 58.5]},
+                { model: "UI-TARS-1.5-7B", avg: 73.2, values: [79.5, 68.8, 74.1, 76.6, 71.7, 82.0, 75.3, 66.3, 81.3, 68.2, 73.2]}
             ];
 
             singleTableData.sort((a, b) => b.avg - a.avg);
